@@ -1,0 +1,19 @@
+<div class="container-fluid mb-4">
+  <div class="row">
+    <!-- Sidebar -->
+    <div class="col-md-3">
+      <app-sidebar-java></app-sidebar-java>
+    </div>
+
+    <!-- Content Section -->
+    <div class="col-md-9">
+      <p class="mt-4" [innerHTML]="j.content1"></p>
+      <p class="mt-4" [innerHTML]="j.content2"></p>
+      <img style="width: 700px; align-items: center; justify-content: center;" [src]="'http://localhost:2000/java_img/' + j.image">
+      <p class="mt-4" [innerHTML]="j.content3"></p>
+      <p class="mt-4" [innerHTML]="j.content4"></p>
+      <app-compiler></app-compiler>
+    </div>
+  </div>
+</div>
+<app-footer></app-footer>

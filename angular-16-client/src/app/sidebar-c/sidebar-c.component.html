@@ -1,0 +1,14 @@
+<nav id="sidebar" class="d-md-block bg-light sidebar mt-5">
+    <div class="position-sticky">
+      <ul class="nav flex-column">
+
+        <h1>C-Topics</h1>
+        <li class="nav-item" *ngFor="let c of tpsc">
+          <a class="nav-link active " [routerLink]="'/c-content/'+c._id" style="text-decoration: none; color:black">
+            {{ c.topic }}
+          </a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  

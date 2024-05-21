@@ -1,0 +1,25 @@
+<div class="container-fluid mb-4">
+  
+  <div class="row">
+    <!-- Sidebar -->
+    <div class="col-md-3">
+      <app-sidebar-c></app-sidebar-c>
+    </div>
+    <!-- Content Section -->
+    <div class="col-md-9">
+      <p class="mt-4" [innerHTML]="cs.content1"></p>
+      <p class="mt-4" [innerHTML]="cs.content2"></p>
+      <img style="width: 700px; margin: auto;" [src]="'http://localhost:2000/c_img/' + cs.image">
+      <p class="mt-4" [innerHTML]="cs.content3"></p>
+      <p class="mt-4" [innerHTML]="cs.content4"></p>
+      <iframe
+          frameBorder="0"
+          height="450px"  
+          src="https://onecompiler.com/embed/c" 
+          width="100%"
+          ></iframe>
+    </div>
+  </div>
+</div>
+<app-footer></app-footer>
+  

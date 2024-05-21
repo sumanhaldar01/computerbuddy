@@ -1,0 +1,41 @@
+<div id="app width=100%">
+  <nav class="navbar navbar-expand-sm navbar-custom navbar-dark bg-dark">
+    <a href="#"  class="navbar-brand" style="color: #2ecc71">
+      🖥️ComputerBuddy
+    </a>
+    <ul class="navbar-nav mr-auto" routerLinkActive="active">
+      <li class="nav-item">
+        <a href="#" class="nav-link" routerLink="">Home</a>
+      </li>
+      <li class="nav-item" *ngIf="Courses">
+        <a href="#" class="nav-link" routerLink="/tutorial-page">Tutorial</a>
+      </li>
+      <li class="nav-item" *ngIf="Contact">
+        <a href="#" class="nav-link" routerLink="contact">Contact</a>
+      </li>
+      <li class="compiler width=100%">
+        <a routerLink="/compiler" class="nav-link" *ngIf="Compiler" routerLink="compiler">Compiler</a>
+      </li>
+    </ul>
+
+    <ul class="navbar-nav ml-auto" *ngIf="!isLoggedIn">
+      <nav class="navbar navbar-light bg-dark">
+        <form class="form-inline">
+          <button class="btn btn-sm btn-outline-success mr-sm-3" type="button"><a href="/register" class="nav-link" routerLink="register">Sign Up </a></button>
+          <button class="btn btn-sm btn btn-outline-success" type="button"><a href="/login" class="nav-link" routerLink="login">Login</a></button>
+        </form>
+      </nav>
+    </ul>
+
+    <ul class="navbar-nav ml-auto" *ngIf="isLoggedIn">
+      <li class="nav-item">
+        <a href="/profile" class="nav-link" style="font-weight: 700; font-size: larger; color: #fff;" routerLink="profile">{{ username }}</a>
+      </li>
+      <button class="btn btn-sm btn btn-outline-danger"  type="button"><a href class="nav-link" (click)="logout()">Log Out</a></button>
+    </ul>
+  </nav>
+
+  <div>
+    <router-outlet></router-outlet>
+  </div>
+</div>

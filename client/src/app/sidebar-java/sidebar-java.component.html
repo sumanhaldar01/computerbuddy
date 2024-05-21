@@ -1,0 +1,13 @@
+<nav id="sidebar" class="col-md-3 col-lg-2 d-md-block bg-light sidebar mt-5">
+    <div class="position-sticky">
+      <ul class="nav flex-column">
+
+        <li class="nav-item" *ngFor="let c of tps">
+          <a class="nav-link active" [routerLink]="'/java-content/'+c._id" style="text-decoration: none; color:black">
+            {{ c.topic }}
+          </a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  
