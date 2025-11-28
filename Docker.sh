@@ -1,6 +1,6 @@
 #!/bin/bash
 # version 1.0
-# Script to install Docker on Ubuntu
+# Script to install Docker on Ubuntu (TEST)
 # Date: 2024-06-10
 
 sudo apt update
