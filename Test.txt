@@ -1,1 +1,1 @@
-For testing Github JIRA Integration.
+For testing the Github JIRA Integration.
